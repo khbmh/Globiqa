@@ -1,3 +1,5 @@
+import { Link } from 'react-router';
+
 function Error() {
   return (
     <div className="flex flex-col justify-around items-center h-screen py-[30vh] lg:py-36">
@@ -7,7 +9,9 @@ function Error() {
           Page Not Found
         </h1>
       </div>
-      <button className="btn btn-ghost border-white/30">Back To Home</button>
+      <Link to="/">
+        <button className="btn btn-ghost border-white/30">Back To Home</button>
+      </Link>
     </div>
   );
 }
