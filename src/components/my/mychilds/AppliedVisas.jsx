@@ -1,7 +1,7 @@
 
 function AppliedVisas() {
   return (
-    <div>AppliedVisas</div>
+    <div>AppliedVisas..</div>
   )
 }
 

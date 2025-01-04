@@ -10,7 +10,7 @@ function MyLayout() {
           className="w-[100px] h-[100px] rounded-badge object-cover"
         />
         <h1 className="-mt-4 font-semibold text-4xl">User Name</h1>
-        <h5 className="-mt-4 text-base opacity-60">User@email.com</h5>
+        <h5 className="-mt-4 text-base opacity-60">User@gemail.com</h5>
       </div>
       <Outlet />
     </div>

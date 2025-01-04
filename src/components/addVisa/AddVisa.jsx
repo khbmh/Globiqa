@@ -1,7 +1,7 @@
 
 function AddVisa() {
   return (
-    <div>AddVisa</div>
+    <div>AddVisa.</div>
   )
 }
 
