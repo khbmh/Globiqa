@@ -1,7 +1,11 @@
+import PageTitle from "../utils/PageTitle"
 
 function AddVisa() {
   return (
-    <div>AddVisa.</div>
+    
+    <div>
+      <PageTitle title="AddVisa. | Globiqa." />
+      AddVisa.</div>
   )
 }
 

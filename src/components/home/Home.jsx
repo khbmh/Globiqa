@@ -1,5 +1,12 @@
+import PageTitle from '../utils/PageTitle';
+
 function Home() {
-  return <div>Home.</div>;
+  return (
+    <div>
+      <PageTitle title="Home. | Globiqa." />
+      Home.
+    </div>
+  );
 }
 
 export default Home;

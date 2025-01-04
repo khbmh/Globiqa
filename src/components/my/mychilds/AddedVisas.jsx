@@ -1,5 +1,9 @@
+import PageTitle from "../../utils/PageTitle";
+
 function AddedVisas() {
-  return <div>AddedVisas..</div>;
+  return <div>
+    <PageTitle title="My Added Visas. | Globiqa." />
+    AddedVisas..</div>;
 }
 
 export default AddedVisas;

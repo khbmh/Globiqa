@@ -23,7 +23,7 @@ function Footer() {
           <a className="link link-hover">Cookie policy</a>
         </nav>
       </footer>
-      <footer className="footer border-white/50 border-t px-10 py-4">
+      <footer className="footer border-white/20 border-t px-10 py-4">
         <aside className="grid-flow-col items-center">
           <svg
             width="24"

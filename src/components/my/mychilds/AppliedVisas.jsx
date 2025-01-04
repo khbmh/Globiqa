@@ -1,7 +1,10 @@
+import PageTitle from "../../utils/PageTitle"
 
 function AppliedVisas() {
   return (
-    <div>AppliedVisas..</div>
+    <div>
+      <PageTitle title="My Applied Visas. | Globiqa." />
+      AppliedVisas..</div>
   )
 }
 
