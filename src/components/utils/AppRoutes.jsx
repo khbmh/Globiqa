@@ -10,6 +10,7 @@ import AuthLayout from '../auth/AuthLayout';
 import Login from '../auth/Login';
 import Register from '../auth/Register';
 import Error from '../error/Error';
+import MyActs from '../my/mychilds/MyActs';
 
 function AppRoutes() {
   return (
@@ -20,6 +21,7 @@ function AppRoutes() {
           <Route path="add-visa" element={<AddVisa />} />
           <Route path="all-visas" element={<AllVisas />} />
           <Route path="my" element={<MyLayout />}>
+            <Route index element={<MyActs />} />
             <Route path="added-visas" element={<AddedVisas />} />
             <Route path="applied-visas" element={<AppliedVisas />} />
           </Route>
