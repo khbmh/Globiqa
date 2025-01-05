@@ -1,8 +1,11 @@
 import {
+  createUserWithEmailAndPassword,
   GoogleAuthProvider,
   onAuthStateChanged,
+  signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from 'firebase/auth';
 import { createContext, useEffect, useState } from 'react';
 import auth from './firebase.config';
@@ -13,18 +16,50 @@ function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const signInWithGoogle = () => {
-    const googleProvider = new GoogleAuthProvider();
-    signInWithPopup(auth, googleProvider)
+  const handleUpdateProfile = (userName, imgLink) =>
+    updateProfile(auth.currentUser, {
+      displayName: userName,
+      photoURL: imgLink,
+    })
+      .then(() => {
+        toast.success('User Registration Success');
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        toast.error(errorCode, 'error occurred');
+      });
+
+  const handleRegister = (userName, imgLink, email, password) => {
+    createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // const user = userCredential.user;
-        // setUser(user);
+        handleUpdateProfile(userName, imgLink);
+        toast.success('User Registration Success');
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        toast.error(errorCode, 'error occurred');
+      });
+  };
+  const handleLogin = (email, password) => {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
         toast.success('Logged in successfully');
       })
       .catch((error) => {
         const errorCode = error.code;
-        const errorMessage = error.message;
-        toast.error(errorCode, ' ', errorMessage);
+        toast.error(errorCode, 'error occurred');
+      });
+  };
+
+  const signInWithGoogle = () => {
+    const googleProvider = new GoogleAuthProvider();
+    signInWithPopup(auth, googleProvider)
+      .then((userCredential) => {
+        toast.success('Logged in successfully');
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        toast.error(errorCode, 'error occurred');
       });
   };
   const handleSingOut = () => {
@@ -34,8 +69,7 @@ function AuthProvider({ children }) {
       })
       .catch((error) => {
         const errorCode = error.code;
-        const errorMessage = error.message;
-        toast.error(errorCode, ' ', errorMessage);
+        toast.error(errorCode, 'error occurred');
       });
   };
   useEffect(() => {
@@ -54,6 +88,8 @@ function AuthProvider({ children }) {
 
   const authData = {
     user,
+    handleRegister,
+    handleLogin,
     setUser,
     loading,
     setLoading,

@@ -3,6 +3,14 @@ import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../utils/AuthProvider';
 
 function Navbar() {
+  const nickName = (name) => {
+    const firstWord = name.split(' ')[0];
+
+    const formattedFirstWord =
+      firstWord.charAt(0).toUpperCase() + firstWord.slice(1).toLowerCase() + '.';
+
+    return formattedFirstWord;
+  };
   const { user, loading } = useContext(AuthContext);
   return (
     <div className="py-2 px-1 flex justify-between items-center w-full">
@@ -28,7 +36,9 @@ function Navbar() {
             <button className="btn btn-ghost border-white/30">login</button>
           </Link>
         ) : (
-          <Link to="/my" className='p-1 text-xl text-rose-200'>{user?.displayName}</Link>
+          <Link to="/my" className="p-1 text-xl text-rose-200">
+            {nickName(user.displayName)} 
+          </Link>
         )}
       </div>
     </div>

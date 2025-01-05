@@ -10,9 +10,7 @@ function PublicRoutes({ children }) {
     return children;
   }
   return (
-    <Navigate
-      to={location.state ? `${location.state.from}` : '/my'}
-    ></Navigate>
+    <Navigate to={location.state ? `${location.state.from}` : '/my'}></Navigate>
   );
 }
 
