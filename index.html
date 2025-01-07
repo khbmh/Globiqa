@@ -7,6 +7,42 @@
     href="https://cdn3d.iconscout.com/3d/premium/thumb/venus-3d-icon-download-in-png-blend-fbx-gltf-file-formats--world-logo-sky-ball-celestial-space-adventure-pack-science-technology-icons-8726902.png?f=webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Globiqa.</title>
+
+  <style>
+    body {
+      position: relative;
+      overflow-y: hidden;
+      background-image: url('https://i.pinimg.com/originals/8a/82/7e/8a827e98d25a5eb93cde4e31ac571466.gif');
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    /* Add black overlay */
+    body::before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background: #000000f2;
+
+      pointer-events: none;
+
+    }
+
+    #root {
+      position: relative;
+      z-index: 3;
+    }
+  </style>
+
 </head>
 
 <body class="bg-black text-white font-mono">

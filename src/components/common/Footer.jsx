@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 function Footer() {
   return (
     <>
-      <footer className="footer border-white/50 border-t p-10">
+      <footer className="footer bg-black/40 border-white/50 border-t p-10">
         <nav>
           <h6 className="footer-title">Services</h6>
           <a className="link link-hover">Branding</a>
@@ -29,7 +29,7 @@ function Footer() {
         <aside className="grid-flow-col items-center">
           <Link to="/">
             <img
-            className='w-[40px] lg:w-[50px]'
+              className="w-[40px] lg:w-[50px]"
               src="https://cdn3d.iconscout.com/3d/premium/thumb/venus-3d-icon-download-in-png-blend-fbx-gltf-file-formats--world-logo-sky-ball-celestial-space-adventure-pack-science-technology-icons-8726902.png?f=webp"
               alt="globiqa logo"
             />
@@ -78,20 +78,22 @@ function Footer() {
           </div>
         </nav>
       </footer>
-      <div className="flex justify-center items-center mt-3">
-        <p className="text-white/50 text-xs">
-          &copy; {new Date().getFullYear()} Globiqa Travels Ltd. All rights
-          reserved.
-        </p>
-      </div>
-      <div className="flex justify-center items-center mt-5 p-1 mb-8">
-        <a
-          href="https://khbmh.github.io/mahi"
-          target="blank"
-          className="text-white/70 text-sm"
-        >
-          Made by Mahi.
-        </a>
+      <div className=' bg-black/50 border-t border-white/20'>
+        <div className="flex justify-center items-center mt-3">
+          <p className="text-white/50 text-xs">
+            &copy; {new Date().getFullYear()} Globiqa Travels Ltd. All rights
+            reserved.
+          </p>
+        </div>
+        <div className="flex justify-center items-center mt-5 p-1 mb-8">
+          <a
+            href="https://khbmh.github.io/mahi"
+            target="blank"
+            className="text-white/70 text-sm"
+          >
+            Made by Mahi.
+          </a>
+        </div>
       </div>
     </>
   );
