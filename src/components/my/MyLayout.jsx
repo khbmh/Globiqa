@@ -44,11 +44,18 @@ function MyLayout() {
           alt={`${user.displayName}'s broken Photo`}
           className="w-[100px] h-[100px] rounded-badge object-cover border border-white/50"
         />
-        <h1 className="-mt-4 font-semibold text-4xl">{user.displayName.toUpperCase()}</h1>
-        <h5 className="-mt-4 text-base opacity-60">{user?.email}</h5>
-        <h5 className="-mt-4 text-base opacity-60">
-          Joined On {formattedAccountCreationDate}
-        </h5>
+
+        <h1 className="-mt-4 font-semibold text-4xl">
+          {user.displayName.toUpperCase()}
+        </h1>
+        {location.pathname === '/my' && (
+          <>
+            <h5 className="-mt-4 text-base opacity-60">{user?.email}</h5>
+            <h5 className="-mt-4 text-base opacity-60">
+              Joined On {formattedAccountCreationDate}
+            </h5>
+          </>
+        )}
         {location.pathname === '/my' && (
           <button
             onClick={handleSingOut}

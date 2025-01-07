@@ -15,7 +15,10 @@ export const AuthContext = createContext(null);
 function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-
+  const [menuVisible, setMenuVisible] = useState(false);
+  const handleMenuVisible = () => {
+    setMenuVisible(!menuVisible);
+  };
   const handleUpdateProfile = (userName, imgLink) =>
     updateProfile(auth.currentUser, {
       displayName: userName,
@@ -90,6 +93,8 @@ function AuthProvider({ children }) {
     user,
     handleRegister,
     handleLogin,
+    menuVisible,
+    handleMenuVisible,
     setUser,
     loading,
     setLoading,
