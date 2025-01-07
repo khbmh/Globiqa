@@ -17,7 +17,8 @@ function Navbar() {
   };
 
   return (
-    <div className="py-2 px-1 flex justify-between items-center w-full">
+    <div className="fixed top-0 backdrop-blur-sm py-2 px-1 flex justify-between items-center w-full">
+      
       <div className=" lg:w-[20vw]">
         <Link to="/">
           <h1 className="font-black text-2xl">Globiqa.</h1>
@@ -90,7 +91,7 @@ function Navbar() {
             </button>
           </div>
 
-          <div className="bg-white/10">
+          <div className="">
             {loading ? (
               <div>...</div>
             ) : !user ? (
@@ -100,7 +101,9 @@ function Navbar() {
                 }}
                 to="auth/login"
               >
-                <button className="btn btn-ghost border-white/30">login</button>
+                <button className="px-4 py-2 mt-4 bg-white/20 border border-transparent hover:border-white/20 hover:bg-white/10 text-xl text-white rounded-xl">
+                  Login
+                </button>
               </Link>
             ) : (
               <Link
@@ -108,7 +111,7 @@ function Navbar() {
                   handleMenuVisible();
                 }}
                 to="/my"
-                className="p-1 text-xl text-rose-200"
+                className="p-1 bg-white/10 text-xl text-rose-200"
               >
                 👋🏻 {nickName(user.displayName)}
               </Link>
