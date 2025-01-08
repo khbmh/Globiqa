@@ -78,14 +78,14 @@ function Footer() {
           </div>
         </nav>
       </footer>
-      <div className=' bg-black/50 border-t border-white/20'>
-        <div className="flex justify-center items-center mt-3">
+      <div className=" bg-black space-y-4 py-4 pb-6 border-t border-white/20">
+        <div className="flex justify-center items-center">
           <p className="text-white/50 text-xs">
             &copy; {new Date().getFullYear()} Globiqa Travels Ltd. All rights
             reserved.
           </p>
         </div>
-        <div className="flex justify-center items-center mt-5 p-1 mb-8">
+        <div className="flex justify-center items-center p-1">
           <a
             href="https://khbmh.github.io/mahi"
             target="blank"
