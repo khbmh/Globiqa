@@ -37,7 +37,7 @@ function Footer() {
           <p>
             Globiqa Travels Ltd.
             <br />
-            Providing reliable tech since 1992
+            Providing reliable services since 1992.
           </p>
         </aside>
         <nav className="md:place-self-center md:justify-self-end">

@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 function MyActs() {
   return (
-    <div className='mx-auto max-w-xl gap-8 lg:gap-16 flex justify-around *:btn *:btn-outline items-center'>
+    <div className="mx-auto max-w-xl gap-8 lg:gap-16 flex flex-col lg:flex-row justify-around *:btn *:btn-outline items-center">
       <button>
         <Link to="added-visas">My Added visas</Link>
       </button>

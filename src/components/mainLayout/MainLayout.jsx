@@ -9,14 +9,30 @@ function MainLayout() {
   return (
     <div className="min-h-screen flex flex-col justify-between">
       <Navbar />
-      <div className='w-full h-[8vh]'></div>
-      {!menuVisible && (
-        <div className="container mx-auto flex items-center justify-center min-h-[50vh] text-center">
-          <Outlet />
-        </div>
-      )}
-      {!menuVisible && <Footer />}
+      <div className="w-full h-[10vh]"></div>
+
+      <div
+        className={`${
+          menuVisible ? 'invisible' : ''
+        } container mx-auto flex items-center justify-center min-h-[50vh] text-center`}
+      >
+        <Outlet />
+      </div>
+
+      <div className={`${menuVisible ? 'invisible' : ''} w-full h-fit`}>
+        <Footer></Footer>
+      </div>
     </div>
+    // <div className="min-h-screen flex flex-col justify-between">
+    //   <Navbar />
+    //   <div className='w-full h-[8vh]'></div>
+    //   {!menuVisible && (
+    //     <div className="container mx-auto flex items-center justify-center min-h-[50vh] text-center">
+    //       <Outlet />
+    //     </div>
+    //   )}
+    //   {!menuVisible && <Footer />}
+    // </div>
   );
 }
 

@@ -18,7 +18,6 @@ function Navbar() {
 
   return (
     <div className="fixed top-0 backdrop-blur-sm py-2 px-1 flex justify-between items-center w-full">
-      
       <div className=" lg:w-[20vw]">
         <Link to="/">
           <h1 className="font-black text-2xl">Globiqa.</h1>
@@ -80,12 +79,12 @@ function Navbar() {
             </NavLink>
           </div>
 
-          <div className="-mt-[120px] pb-16">
+          <div className="-mt-[110px] pb-12">
             <button
               onClick={() => {
                 handleMenuVisible();
               }}
-              className="text-8xl font-black miniNavBtn"
+              className="text-8xl opacity-40 font-black miniNavBtn"
             >
               ✕
             </button>

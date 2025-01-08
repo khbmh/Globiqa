@@ -48,7 +48,7 @@ function Login() {
           </button>
         </div>
       </form>
-
+      <div className="divider -my-3">OR</div>
       <div
         onClick={signInWithGoogle}
         className="text-lg px-4 py-2 bg-white/10 rounded-full"
